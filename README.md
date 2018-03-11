@@ -16,7 +16,7 @@ docker run --rm -p 9000:9000 -v model:/model allxone/tensorflow_serving
 
 # GPU
 docker build -t allxone/tensorflow_serving_gpu -f Dockerfile.gpu .
-docker run --rm -p 9000:9000 -v model:/model allxone/tensorflow_serving_gpu
+nvidia-docker run --rm -p 9000:9000 -v /home/allxone/scoring_server/model:/model allxone/tensorflow_serving_gpu
 ```
 
 ## Credits
